@@ -1,8 +1,8 @@
 #!/bin/bash
 # ----
 cd /root
-sudo apt-get update 
 sudo apt install expect -y
+sleep 3
 # cozdadum skript avtootveta
 echo -e '#!/usr/bin/expect\nspawn sudo apt-get upgrade -y \nexpect "Package configuration"'> /root/autootvet.sh
 echo 'send "111\r"' >> /root/autootvet.sh
